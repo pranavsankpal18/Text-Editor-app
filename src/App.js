@@ -27,13 +27,13 @@ function App() {
       setMode("dark");
       document.body.style.backgroundColor = "#042743";
       showAlert("Dark mode is enabled","success");
-      document.title = 'Text Editor - Dark Mode';
+      // document.title = 'Text Editor - Dark Mode';
     }
     else{
       setMode("light");
       document.body.style.backgroundColor =  "white";
       showAlert("Light mode is enabled","success");
-      document.title = 'Text Editor - Light Mode';
+      // document.title = 'Text Editor - Light Mode';
     }
   }
   return (
@@ -46,8 +46,8 @@ function App() {
       
       <div className="container my-3">
         <Routes>
-          <Route exact path="/About" element={<About />}></Route>
-          <Route exact path="/" element={<TextForm heading="Enter the text analyze below" mode={mode} showAlert={showAlert}/>}></Route>
+          <Route exact path="/About" element={<About mode={mode}/>}></Route>
+          <Route exact path="/" element={<TextForm heading="Try TextEditor - word counter, character counter, Remove extra spaces" mode={mode} showAlert={showAlert}/>}></Route>
         </Routes>
       
       </div>
