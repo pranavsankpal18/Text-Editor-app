@@ -3,7 +3,6 @@ import React, {useState} from 'react'
 function TextForm(props) {
 
     const onClickHandlerup = () => {
-        // console.log("uppercase was clicked :" + text); 
         let newText = text.toUpperCase();
         setText(newText); 
         props.showAlert("Converted to uppercase !","success");
@@ -21,10 +20,7 @@ function TextForm(props) {
     }
 
     const onClickCopy = () => {
-      let text = document.getElementById("myBox");
-      text.select();
-        navigator.clipboard.writeText(text.value);
-        document.getSelection().removeAllRanges();          //if you dont want  to see selected text
+        navigator.clipboard.writeText(text);
         props.showAlert("Copied to clipboard !","success");
     }
 
@@ -35,7 +31,6 @@ function TextForm(props) {
     }
 
     const handleOnChange = (event) => {
-        // console.log("on change") ;
         setText(event.target.value);
     }
 

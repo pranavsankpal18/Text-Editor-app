@@ -40,7 +40,7 @@ function App() {
        
       <>
       <Router> 
-      <Navbar title={"TextUtils"} about={"About"} mode={mode} toggleMode={toggleMode}/>
+      <Navbar title={"TextEditor"} about={"About"} mode={mode} toggleMode={toggleMode}/>
 
       <Alert alert={alert}/>
       
